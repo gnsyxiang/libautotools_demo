@@ -66,6 +66,11 @@ config.status
 libtool
 stamp-h1
 
+#--------------------
+# ignore for npm
+#--------------------
+node_modules/
+
 
 #--------------------
 # ignore for markdown 
