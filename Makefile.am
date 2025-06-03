@@ -70,3 +70,8 @@ _dist_files_com     += \
 EXTRA_DIST          = $(_dist_files_com)
 
 DISTCLEANFILES = $(project_name).pc
+
+distclean-local:
+	-rm -rf .cache/ node_modules/ autom4te.cache/ build-aux/
+	-rm -rf compile_commands.json aclocal.m4 config.h.in config.h.in~ configure package.json
+
