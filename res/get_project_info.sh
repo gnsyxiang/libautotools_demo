@@ -54,9 +54,7 @@ get_full_version_num()
     echo -e "\t\t  ])"                                          >>  ${check_project_info}
 }
 
-
-
-if [ -d $TOP_DIR/.git ]; then
+if [[ -d $TOP_DIR/.git ]]; then
     echo "### get project name..."
 
     libproject_url=$(git remote -v | head -n1 | awk '{print $2}' | sed 's/git@/https:\/\//' | sed 's/com:/com\//')
@@ -69,7 +67,7 @@ if [ -d $TOP_DIR/.git ]; then
     branch_name_new=$(echo "$branch_name" | sed 's/\//_/' | sed 's/-/_/g')
     libproject_version=$(git describe --tags | sed s/-/_/g)
 
-    if [ x"$branch_name_new" = x"main" ] || [ x"$branch_name_new" = x"master" ]; then
+    if [[ x"$branch_name_new" = x"main" || x"$branch_name_new" = x"" || x"$branch_name_new" = x"master" ]]; then
         get_full_version_num "$libproject_version" "$libproject_version"
     else
         get_full_version_num "$branch_name_new"-"$libproject_version" "$libproject_version"
