@@ -37,7 +37,7 @@ select_vender()
     done
     if [[ -z "${usr_select_vender}" || ${_flag} != "true" ]]; then
         echo "error select vender !!!"
-        exit
+        exit 1
     fi
 
     configure_param="${configure_param} --with-vender=${usr_select_vender}"
@@ -74,7 +74,7 @@ select_chip()
     done
     if [[ ${_flag} != "true" ]]; then
         echo "error select chip !!!"
-        exit
+        exit 1
     fi
 
     configure_param="${configure_param} --with-chip=${usr_select_chip}"
@@ -107,7 +107,7 @@ select_os()
     done
     if [[ ${_flag} != "true" ]]; then
         echo "error select os !!!"
-        exit
+        exit 1
     fi
 
     configure_param="${configure_param} --with-os=${usr_select_os}"
@@ -140,7 +140,7 @@ select_product()
     done
     if [[ ${_flag} != "true" ]]; then
         echo "error select product !!!"
-        exit
+        exit 1
     fi
 
     configure_param="${configure_param} --with-product=${usr_select_product}"
@@ -173,7 +173,7 @@ select_language()
     done
     if [[ ${_flag} != "true" ]]; then
         echo "error select language !!!"
-        exit
+        exit 1
     fi
 
     configure_param="${configure_param} --with-language=${usr_select_language}"
@@ -201,7 +201,7 @@ select_build_version()
     done
     if [[ ${_flag} != "true" ]]; then
         echo "error select build version !!!"
-        exit
+        exit 1
     fi
 }
 
@@ -315,7 +315,7 @@ ldflag="${ldflag} -L${install_path}/lib"
 
 make distclean
 
-cd "${cur_path}" && ./autogen.sh && cd - || exit
+cd "${cur_path}" && ./autogen.sh && cd - || exit 1
 
 export STRIP=${cross_gcc_path}strip
 "${cur_path}"/configure                                     \
@@ -334,8 +334,8 @@ export STRIP=${cross_gcc_path}strip
     \
     ${configure_param}
 
-if [ $? -ne 0 ]; then
-    exit
+if [[ $? -ne 0 ]]; then
+    exit 1
 fi
 
 thread_jobs=$(getconf _NPROCESSORS_ONLN 2>/dev/null || echo 1)
