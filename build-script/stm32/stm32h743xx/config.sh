@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-chip=stm32h7xx
+chip=stm32h743xx
 
 os=freertos
 
@@ -19,6 +19,6 @@ cxxflag=
 ldflag=-mcpu=cortex-m7 -mthumb -mfpu=fpv5-d16 -mfloat-abi=hard -specs=nano.specs -specs=nosys.specs
 lib=-lc -lm -lnosys
 debug= -O0 -gdwarf-2 -g
-release=-Og
+release=-Os
 
-install_path=/mnt/nfs/stm32/stm32h7xx
+install_path=/mnt/nfs/stm32/stm32h743xx

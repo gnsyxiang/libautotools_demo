@@ -19,3 +19,54 @@
 # ===============================================================
 
 SUBDIRS = $(run_os)
+
+# ------------------
+# defining variables
+# ------------------
+_no_error_com   =
+_define_com     =
+_include_com    = $(include_com)
+_sources_com    =
+_cppflags_com   =
+_cflags_com     =
+_cxxflags_com   =
+_ldflags_com    =
+_ldadd_com      =
+bin_PROGRAMS    =
+
+# ---------------------
+# add necessary content
+# ---------------------
+_no_error_com   +=
+
+_define_com     +=
+
+_include_com    += \
+                   -I$(top_srcdir)/include/$(run_os) \
+                   -I$(top_srcdir)/include
+
+_sources_com    +=
+
+_cppflags_com   += \
+                   $(_no_error_com) \
+                   $(_include_com) \
+                   $(_define_com)
+
+_cflags_com     +=
+
+_cxxflags_com   +=
+
+_ldflags_com    +=
+
+_ldadd_com      += \
+                   $(top_builddir)/src/lib$(project_name).la \
+                   $(ldadd_com)
+
+bin_PROGRAMS            += hy_calc_demo
+hy_calc_demo_SOURCES    = $(_sources_com) hy_calc_demo.c
+hy_calc_demo_CPPFLAGS   = $(_cppflags_com)
+hy_calc_demo_CFLAGS     = $(_cflags_com)
+hy_calc_demo_CXXFLAGS   = $(_cxxflags_com)
+hy_calc_demo_LDFLAGS    = $(_ldflags_com)
+hy_calc_demo_LDADD      = $(_ldadd_com)
+

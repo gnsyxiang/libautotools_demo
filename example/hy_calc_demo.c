@@ -2,10 +2,10 @@
  * 
  * Release under GPLv-3.0.
  * 
- * @file    hy_calc.c
+ * @file    main.c
  * @brief   
  * @author  gnsyxiang <gnsyxiang@163.com>
- * @date    22/03 2022 16:25
+ * @date    18/03 2021 20:22
  * @version v0.0.1
  * 
  * @since    note
@@ -13,16 +13,19 @@
  * 
  *     change log:
  *     NO.     Author              Date            Modified
- *     00      zhenquan.qiu        22/03 2022      create the file
+ *     00      zhenquan.qiu        18/03 2021      create the file
  * 
- *     last modified: 22/03 2022 16:25
+ *     last modified: 18/03 2021 20:22
  */
 #include <stdio.h>
 
 #include "hy_calc.h"
 
-int HyCalcAdd(int a, int b)
+int main(int argc, char const* argv[])
 {
-    return (a + b);
+    int ret = HyCalcAdd(4, 5);
+    printf("ret: %d \n", ret);
+
+    return 0;
 }
 

@@ -27,8 +27,8 @@ AC_DEFUN([SELECT_CHIP],
         chip=""
 
         AC_ARG_WITH([chip],
-                    [AS_HELP_STRING([--with-chip=@<:@ubuntu|windows|rk3568|esp32|stm32h7xx@:>@],
-                                    [select chip about @<:@ubuntu|windows|rk3568|esp32|stm32h7xx@:>@ @<:@default=ubuntu@:>@])],
+                    [AS_HELP_STRING([--with-chip=@<:@ubuntu|windows|rk3568|esp32|stm32h743xx|stm32f429xx@:>@],
+                                    [select chip about @<:@ubuntu|windows|rk3568|esp32|stm32h743xx|stm32f429xx@:>@ @<:@default=ubuntu@:>@])],
                     [],
                     [with_chip=ubuntu])
 
@@ -53,21 +53,27 @@ AC_DEFUN([SELECT_CHIP],
                 AC_DEFINE(HAVE_SELECT_OS_FREERTOS,  1, [select freertos os])
                 chip="esp32"
             ;;
-            stm32h7xx)
-                AC_DEFINE(HAVE_SELECT_CHIP_STM32H7XX,  1, [select stm32h7xx chip])
+            stm32h743xx)
+                AC_DEFINE(HAVE_SELECT_CHIP_STM32H743XX,  1, [select stm32h743xx chip])
                 AC_DEFINE(HAVE_SELECT_OS_MCU,  1, [select mcu os])
-                chip="stm32h7xx"
+                chip="stm32h743xx"
+            ;;
+            stm32f429xx)
+                AC_DEFINE(HAVE_SELECT_CHIP_STM32F429XX,  1, [select stm32f429xx chip])
+                AC_DEFINE(HAVE_SELECT_OS_MCU,  1, [select mcu os])
+                chip="stm32f429xx"
             ;;
             *)
-                AC_MSG_ERROR([bad value ${with_chip} for --with-chip=@<:@ubuntu|windows|rk3568|esp32|stm32h7xx@:>@])
+                AC_MSG_ERROR([bad value ${with_chip} for --with-chip=@<:@ubuntu|windows|rk3568|esp32|stm32h743xx|stm32f429xx@:>@])
             ;;
         esac
 
         AC_SUBST(chip)
 
-        AM_CONDITIONAL([COMPILE_SELECT_CHIP_UBUNTU],    [test "x$with_chip" = "xubuntu"])
-        AM_CONDITIONAL([COMPILE_SELECT_CHIP_WINDOWS],   [test "x$with_chip" = "xwindows"])
-        AM_CONDITIONAL([COMPILE_SELECT_CHIP_RK3568],    [test "x$with_chip" = "xrk3568"])
-        AM_CONDITIONAL([COMPILE_SELECT_CHIP_ESP32],     [test "x$with_chip" = "xesp32"])
-        AM_CONDITIONAL([COMPILE_SELECT_CHIP_STM32H7XX], [test "x$with_chip" = "xstm32h7xx"])
+        AM_CONDITIONAL([COMPILE_SELECT_CHIP_UBUNTU],        [test "x$with_chip" = "xubuntu"])
+        AM_CONDITIONAL([COMPILE_SELECT_CHIP_WINDOWS],       [test "x$with_chip" = "xwindows"])
+        AM_CONDITIONAL([COMPILE_SELECT_CHIP_RK3568],        [test "x$with_chip" = "xrk3568"])
+        AM_CONDITIONAL([COMPILE_SELECT_CHIP_ESP32],         [test "x$with_chip" = "xesp32"])
+        AM_CONDITIONAL([COMPILE_SELECT_CHIP_STM32H743XX],   [test "x$with_chip" = "xstm32h743xx"])
+        AM_CONDITIONAL([COMPILE_SELECT_CHIP_STM32F429XX],   [test "x$with_chip" = "xstm32f429xx"])
     ])

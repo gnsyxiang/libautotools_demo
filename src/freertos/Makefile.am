@@ -44,9 +44,7 @@ _include_com    += \
                    -I$(top_srcdir)/include/$(run_os) \
                    -I$(top_srcdir)/include
 
-_sources_com    += \
-                   hy_calc.c \
-                   hy_module.c
+_sources_com    +=
 
 _cppflags_com   += \
                    $(_no_error_com) \
@@ -65,3 +63,4 @@ lib@project_name@_@run_os@_la_CFLAGS     = $(_cflags_com)
 lib@project_name@_@run_os@_la_CXXFLAGS   = $(_cxxflags_com)
 lib@project_name@_@run_os@_la_LDFLAGS    = $(_ldflags_com)
 lib@project_name@_@run_os@_la_LIBADD     = $(_ldadd_com)
+

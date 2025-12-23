@@ -85,8 +85,8 @@ _build/
 install/
 doxygen/
 
-autotools_demo_lib.pc
-!autotools_demo_lib.pc.in
+autotools_demo.pc
+!autotools_demo.pc.in
 
 *.o
 *.lo

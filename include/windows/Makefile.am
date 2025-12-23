@@ -31,12 +31,11 @@ install_includedir      = $(includedir)/$(project_name)
 # ---------------------
 _no_install_headers_com +=
 
-_install_headers_com    += \
-                           hy_calc.h \
-                           hy_module.h
+_install_headers_com    +=
 
 # ------------------
 # make install files
 # ------------------
 noinst_HEADERS          = $(_no_install_headers_com)
 install_include_HEADERS = $(_install_headers_com)
+
