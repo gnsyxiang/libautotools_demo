@@ -1,0 +1,1 @@
+../../libhy_com/res/get_cross_gcc_info.sh

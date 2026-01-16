@@ -4,6 +4,7 @@
 AC_PREREQ([2.69])
 
 m4_include([m4/check_project_info.m4])
+m4_include([m4/get_cross_gcc_info.m4])
 
 AC_INIT([PROJECT_NAME], [VERSION_NUM], [EMAIL_INFO], [PROJECT_NAME], [PROJECT_URL])
 AC_CONFIG_SRCDIR([config.h.in])
@@ -27,6 +28,7 @@ SELECT_LANGUAGE
 
 # check m4 macro
 CHECK_PROJECT_INFO
+GCC_PREFIX_INFO
 CHECK_VERSION_INFO
 CHECK_DOXYGEN
 CHECK_DEBUG_RELEASE

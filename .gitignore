@@ -43,6 +43,7 @@ build-aux/
 autom4te.cache/
 
 m4/check_project_info.m4
+m4/get_cross_gcc_info.m4
 m4/libtool.m4
 m4/lt~obsolete.m4
 m4/ltoptions.m4
