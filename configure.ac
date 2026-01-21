@@ -79,6 +79,7 @@ AC_CONFIG_FILES([Makefile
                  include/Makefile
                  include/freertos/Makefile
                  include/linux/Makefile
+                 include/mcu/Makefile
                  include/windows/Makefile
                  res/Makefile
                  res/voice/Makefile
@@ -87,10 +88,12 @@ AC_CONFIG_FILES([Makefile
                  src/Makefile
                  src/freertos/Makefile
                  src/linux/Makefile
+                 src/mcu/Makefile
                  src/windows/Makefile
                  test/Makefile
                  test/freertos/Makefile
                  test/linux/Makefile
+                 test/mcu/Makefile
                  test/windows/Makefile])
 AC_OUTPUT
 
