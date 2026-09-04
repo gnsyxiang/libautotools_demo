@@ -1,0 +1,52 @@
+/**
+ *
+ * Release under GPLv-3.0.
+ * 
+ * @file    autotools_demo_version.h
+ * @brief   
+ * @author  gnsyxiang <gnsyxiang@163.com>
+ * @date    08/14 2026 10:46
+ * @version v0.0.1
+ * 
+ * @since    note
+ * @note     note
+ * 
+ *     change log:
+ *     NO.     Author              Date            Modified
+ *     00      zhenquan.qiu        08/14 2026      create the file
+ * 
+ *     last modified: 08/14 2026 10:46
+ */
+#ifndef __LIBAUTOTOOLS_DEMO_INCLUDE_AUTOTOOLS_DEMO_VERSION_H_
+#define __LIBAUTOTOOLS_DEMO_INCLUDE_AUTOTOOLS_DEMO_VERSION_H_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#define AUTOTOOLS_DEMO_VERSION_CURRENT         1
+#define AUTOTOOLS_DEMO_VERSION_REVISION        0
+#define AUTOTOOLS_DEMO_VERSION_AGE             0
+
+#define AUTOTOOLS_DEMO_VERSION_NUM             0
+
+#define AUTOTOOLS_DEMO_VERSION_IS_RELEASE      1
+#define AUTOTOOLS_DEMO_VERSION_PREFIX          ""
+#define AUTOTOOLS_DEMO_VERSION_SUFFIX          ""
+
+#define AUTOTOOLS_DEMO_VERSION_MAJOR           (AUTOTOOLS_DEMO_VERSION_CURRENT - AUTOTOOLS_DEMO_VERSION_AGE)
+#define AUTOTOOLS_DEMO_VERSION_MINOR           (AUTOTOOLS_DEMO_VERSION_AGE)
+#define AUTOTOOLS_DEMO_VERSION_PATCH           (AUTOTOOLS_DEMO_VERSION_REVISION)
+
+#define AUTOTOOLS_DEMO_VERSION_HEX                 \
+    ((AUTOTOOLS_DEMO_VERSION_MAJOR * 1000000) +    \
+    (AUTOTOOLS_DEMO_VERSION_MINOR * 10000)    +    \
+    (AUTOTOOLS_DEMO_VERSION_PATCH * 100)      +    \
+    (AUTOTOOLS_DEMO_VERSION_NUM))
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif
+

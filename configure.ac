@@ -77,9 +77,12 @@ AC_CONFIG_FILES([Makefile
                  example/mcu/Makefile
                  example/windows/Makefile
                  include/Makefile
+                 include/autotools_demo/Makefile
                  include/freertos/Makefile
                  include/linux/Makefile
                  include/mcu/Makefile
+                 include/mcu/stm32f429xx/Makefile
+                 include/mcu/stm32h743xx/Makefile
                  include/windows/Makefile
                  res/Makefile
                  res/voice/Makefile
@@ -89,6 +92,8 @@ AC_CONFIG_FILES([Makefile
                  src/freertos/Makefile
                  src/linux/Makefile
                  src/mcu/Makefile
+                 src/mcu/stm32f429xx/Makefile
+                 src/mcu/stm32h743xx/Makefile
                  src/windows/Makefile
                  test/Makefile
                  test/freertos/Makefile

@@ -89,6 +89,9 @@ doxygen/
 autotools_demo.pc
 !autotools_demo.pc.in
 
+autotools_demo_version.h
+!autotools_demo_version.h.in
+
 *.o
 *.lo
 *.la

@@ -5,7 +5,7 @@
 # @file    Makefile.am
 # @brief   
 # @author  gnsyxiang <gnsyxiang@163.com>
-# @date    05/03 2021 10:35
+# @date    04/09 2026 09:52
 # @version v0.0.1
 # 
 # @since    note
@@ -13,12 +13,10 @@
 # 
 #     change log:
 #     NO.     Author              Date            Modified
-#     00      zhenquan.qiu        05/03 2021      create the file
+#     00      zhenquan.qiu        04/09 2026      create the file
 # 
-#     last modified: 05/03 2021 10:35
+#     last modified: 04/09 2026 09:52
 # ===============================================================
-
-SUBDIRS = $(project_name) $(run_os)
 
 # ------------------
 # defining variables
@@ -34,8 +32,7 @@ install_includedir      = $(includedir)/$(project_name)
 _no_install_headers_com +=
 
 _install_headers_com    += \
-                           hy_calc.h \
-                           hy_module.h
+                           autotools_demo_version.h
 
 # ------------------
 # make install files
