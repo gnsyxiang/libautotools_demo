@@ -3,7 +3,7 @@
 # set -x
 
 TOP_DIR=.
-BUILD_AUX_DIR=${TOP_DIR}/res
+BUILD_AUX_DIR=${TOP_DIR}/tools
 
 # generate version number
 generate_version_num()

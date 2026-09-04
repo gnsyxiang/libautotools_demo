@@ -99,7 +99,8 @@ AC_CONFIG_FILES([Makefile
                  test/freertos/Makefile
                  test/linux/Makefile
                  test/mcu/Makefile
-                 test/windows/Makefile])
+                 test/windows/Makefile
+                 tools/Makefile])
 AC_OUTPUT
 
 AC_MSG_RESULT([
